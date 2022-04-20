@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="heroimage-container">
-      <div>
+      <div class="heroimage-wrapper">
         <div class="heroimage-text__wrapper">
           <span class="heroimage-text__title">Spider-Man: No Way Home</span>
           <span class="heroimage-text__title">Peter Parker é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha.</span>
