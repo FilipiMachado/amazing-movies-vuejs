@@ -1,17 +1,27 @@
 <template>
-  <nav>
+  <nav class="header-container">
     <router-link to="/">
-      <img src="./assets/pop-movies-logo.png" alt="movies logo">
+      <img class="header-img" src="./assets/tmdb_logo.svg" alt="">
     </router-link>
   </nav>
   <router-view/>
 </template>
 
-<style scoped>
-nav {
-  background-color: #222;
+<style>
+* {
+  margin: 0;
+  padding: 0;
 }
-img {
+.header-container {
+  display: flex;
+  background-color: #222;
+  align-items: center;
+  padding: 20px 0px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.header-img {
   width: 120px;
+  margin: 10px 20px;
 }
 </style>
