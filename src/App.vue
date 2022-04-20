@@ -1,22 +1,17 @@
 <template>
-  <div>
-    <HomeView />
-  </div>
+  <nav>
+    <router-link to="/">
+      <img src="./assets/pop-movies-logo.png" alt="movies logo">
+    </router-link>
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-import HomeView from './views/HomeView.vue'
-
-export default {
-  components: {
-    HomeView,
-  },
-  data() {
-    return {}
-  },
+<style scoped>
+nav {
+  background-color: #222;
 }
-</script>
-
-<style>
-
+img {
+  width: 120px;
+}
 </style>

@@ -1,11 +1,6 @@
 <template>
   <div>
-    <nav>
-      <router-link to="/">
-        <img src="../assets/pop-movies-logo.png" alt="movies logo" />
-      </router-link>
-    </nav>
-    <router-view />
+    header
   </div>
 </template>
 
