@@ -1,16 +1,21 @@
 <template>
-  <div>Header Component</div>
+  <div>
+    <nav>
+      <router-link to="/">
+        <img src="../assets/pop-movies-logo.png" alt="movies logo" />
+      </router-link>
+    </nav>
+    <router-view />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   data() {
     return {}
   },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
