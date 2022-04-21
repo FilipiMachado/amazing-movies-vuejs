@@ -23,7 +23,7 @@ export default {
   display: flex;
   align-items: center;
   height: 100px;
-  padding: 0px 15px;
+  padding: 0px 25px;
   background-color: #1c1c1c;
 }
 .searchbar__wrapper {
