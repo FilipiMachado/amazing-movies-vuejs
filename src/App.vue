@@ -11,12 +11,14 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Abel', sans-serif;
+  box-sizing: border-box;
 }
 .header-container {
   display: flex;
   background-color: #222;
   align-items: center;
-  padding: 20px 0px;
+  padding: 10px 0px;
   margin: 0 auto;
   justify-content: space-between;
 }
