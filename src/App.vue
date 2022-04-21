@@ -22,6 +22,6 @@
 }
 .header-img {
   width: 120px;
-  margin: 10px 20px;
+  margin: 10px 30px;
 }
 </style>

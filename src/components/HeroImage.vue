@@ -28,7 +28,23 @@ export default {
   height: 600px;
   position: relative;
 }
-.heroimage-text__wrapper {}
-.heroimage-text__title {}
-.heroimage-text__description {}
+.heroimage-text__wrapper {
+  z-index: 100;
+  max-width: 700px;
+  position: absolute;
+  bottom: 40px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.heroimage-text__title {
+  font-size: 2.0rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.heroimage-text__description {
+  width: 80%;
+  font-size: 1.2rem;
+}
 </style>
