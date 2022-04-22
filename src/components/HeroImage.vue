@@ -23,9 +23,10 @@ export default {
 <style scoped>
 .heroimage-container {
   background-image: url('../assets/hero-image-example.jpg');
-  background-size: 100% cover;
+  background-size: cover;
   background-position: center;
-  height: 600px;
+  background-repeat: no-repeat;
+  height: 650px;
   position: relative;
 }
 .heroimage-text__wrapper {

@@ -70,7 +70,7 @@ export default {
 <style scoped>
 .moviesgrid__main-content {}
 .moviesgrid__title-wrapper {
-  padding: 30px;
+  padding: 20px 30px;
 }
 .moviesgrid__title {
   font-size: 2rem;
@@ -79,10 +79,11 @@ export default {
 }
 .moviesgrid__grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
 }
 .moviesgrid__movie-wrapper {
-  padding: 5px 10px
+  padding: 0px 20px;
 }
 .moviesgrid__movie-link {}
 .moviesgrid__movie-image {
