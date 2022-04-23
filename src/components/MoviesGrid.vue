@@ -1,14 +1,16 @@
 <template>
-  <div class="moviesgrid__main-content">
+  <div>
     <div class="moviesgrid__title-wrapper">
       <span class="moviesgrid__title">Filmes em Alta</span>
     </div>
-    <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__grid-container">
-      <div class="moviesgrid__moviesgrid__movie-wrapper">
+    <div class="moviesgrid__main-content">
+      <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__grid-container">
+      <div class="moviesgrid__movie-wrapper">
         <a class="moviesgrid__movie-link" href="">
           <img class="moviesgrid__movie-image" :src="'http://image.tmdb.org/t/p/w780' + movie.backdrop_path" alt="" srcset="">
         </a>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -38,9 +40,13 @@ export default {
 </script>
 
 <style scoped>
-.moviesgrid__main-content {}
+.moviesgrid__main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
 .moviesgrid__title-wrapper {
-  padding: 20px 30px;
+  padding: 20px;
 }
 .moviesgrid__title {
   font-size: 2rem;
@@ -48,16 +54,11 @@ export default {
   color: #353535;
 }
 .moviesgrid__grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 2rem;
 }
 .moviesgrid__movie-wrapper {
-  padding: 0px 20px;
 }
 .moviesgrid__movie-link {}
 .moviesgrid__movie-image {
-  width: 240px;
   border-radius: 30px;
 }
 </style>
