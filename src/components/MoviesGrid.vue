@@ -62,7 +62,22 @@
 export default {
   name: 'MoviesGrid',
   data() {
-    return {}
+    return {
+      moviesData: undefined,
+    }
+  },
+  mounted() {
+    this.getMovieNames()
+  },
+  methods: {
+    async getMovieNames() {
+      const req = await fetch('https://api.themoviedb.org/3/movie/550?api_key=d34609fd1a782372f150c40ad84616df') /* http://localhost:3000/burgers */
+      const data = await req.json()
+
+      this.moviesData = data
+
+      console.log(this.moviesData.title)
+    },
   },
 };
 </script>
