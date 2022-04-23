@@ -16,23 +16,11 @@
 <script>
 export default {
   name: 'MoviesGrid',
+  props: [
+    'moviesData'
+  ],
   data() {
-    return {
-      moviesData: undefined,
-    }
-  },
-  mounted() {
-    this.getMovieNames()
-  },
-  methods: {
-    async getMovieNames() {
-      const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR")
-      const data = await API_URL.json()
-
-      this.moviesData = data.results
-
-      console.log(this.moviesData)
-    },
+    return {}
   },
 };
 </script>
