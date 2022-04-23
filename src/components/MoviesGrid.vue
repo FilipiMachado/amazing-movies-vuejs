@@ -3,55 +3,10 @@
     <div class="moviesgrid__title-wrapper">
       <span class="moviesgrid__title">Filmes em Alta</span>
     </div>
-    <div class="moviesgrid__grid-container">
-      <div class="moviesgrid__movie-wrapper">
+    <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__grid-container">
+      <div class="moviesgrid__moviesgrid__movie-wrapper">
         <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
-        </a>
-      </div>
-      <div class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" src="http://image.tmdb.org/t/p/w780/wd7b4Nv9QBHDTIjc2m7sr0IUMoh.jpg" alt="" srcset="">
+          <img class="moviesgrid__movie-image" :src="'http://image.tmdb.org/t/p/w780' + movie.backdrop_path" alt="" srcset="">
         </a>
       </div>
     </div>
@@ -71,12 +26,12 @@ export default {
   },
   methods: {
     async getMovieNames() {
-      const req = await fetch('https://api.themoviedb.org/3/movie/550?api_key=d34609fd1a782372f150c40ad84616df') /* http://localhost:3000/burgers */
-      const data = await req.json()
+      const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR")
+      const data = await API_URL.json()
 
-      this.moviesData = data
+      this.moviesData = data.results
 
-      console.log(this.moviesData.title)
+      console.log(this.moviesData)
     },
   },
 };
