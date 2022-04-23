@@ -24,7 +24,7 @@ export default {
   color: #fff;
   border: 0px;
   font-size: 30px;
-  margin: 20px auto;
+  margin: 30px auto;
   transition: all 0.3s ease 0s;
   outline: none;
   cursor: pointer;
