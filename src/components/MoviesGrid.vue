@@ -34,8 +34,6 @@ export default {
       const data = await API_URL.json()
 
       this.moviesData = data.results
-
-      console.log(this.moviesData)
     },
   },
 };
@@ -64,6 +62,7 @@ export default {
 .moviesgrid__movie-link {}
 .moviesgrid__movie-image {
   width: 100%;
+  height: 300px;
   max-width: 720px;
   object-fit: cover;
   border-radius: 20px;
