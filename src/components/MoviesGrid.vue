@@ -1,5 +1,6 @@
 <template>
   <div>
+    <SearchBar @filteredMovies="getFilteredMovies"/>
     <div class="moviesgrid__title-wrapper">
       <span class="moviesgrid__title">Filmes em Alta</span>
     </div>
@@ -18,8 +19,13 @@
 </template>
 
 <script>
+import SearchBar from './SearchBar.vue'
+
 export default {
   name: 'MoviesGrid',
+  components: {
+    SearchBar,
+  },
   data() {
     return {
       moviesData: undefined,
@@ -34,6 +40,9 @@ export default {
       const data = await API_URL.json()
 
       this.moviesData = data.results
+    },
+    getFilteredMovies(value) {
+      console.log(value)
     },
   },
 };

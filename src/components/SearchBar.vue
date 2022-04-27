@@ -5,8 +5,8 @@
         search
       </span>
       <input class="searchbar__input" type="text" v-model="searchItem">
-      <div>
-        Search Results
+      <div v-for="movie in filteredMoviesData" :key="movie.id">
+        {{ movie.original_title }}
       </div>
     </div>
   </div>
@@ -18,21 +18,23 @@ export default {
   data() {
     return {
       searchItem: undefined,
-      moviesData: undefined,
+      filteredMoviesData: undefined,
     }
   },
   mounted() {
-    console.log(this.searchItem)
-    console.log(this.getMovieNames())
+    //console.log(this.searchItem)
+    //console.log(this.getMovieNames())
   },
   methods: {
     async getMovieNames() {
       const API_URL = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR&query=${this.searchItem}&page=1&include_adult=false`)
       const data = await API_URL.json()
 
-      this.moviesData = data.results
+      this.filteredMoviesData = data.results
 
-      console.log(this.moviesData)
+      this.$emit('filteredMovies', this.filteredMoviesData)
+      
+      //console.log(this.filteredMoviesData)
     },
     searchMovie() {
       this.getMovieNames()
