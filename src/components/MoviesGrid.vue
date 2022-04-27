@@ -15,16 +15,19 @@
       </div>
     </div>
     </div>
+    <DialogMoviesInfo />
   </div>
 </template>
 
 <script>
 import SearchBar from './SearchBar.vue'
+import DialogMoviesInfo from './DialogMoviesInfo.vue'
 
 export default {
   name: 'MoviesGrid',
   components: {
     SearchBar,
+    DialogMoviesInfo,
   },
   data() {
     return {
