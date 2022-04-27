@@ -4,10 +4,10 @@
       <span @click="searchMovie" class="material-symbols-outlined searchbar__icon">
         search
       </span>
-      <input class="searchbar__input" type="text" v-model="searchItem">
-      <div v-for="movie in filteredMoviesData" :key="movie.id">
-        {{ movie.original_title }}
-      </div>
+      <input class="searchbar__input" 
+             type="text" 
+             v-model="searchItem"
+             placeholder="Search for a movie">
     </div>
   </div>
 </template>
@@ -22,8 +22,6 @@ export default {
     }
   },
   mounted() {
-    //console.log(this.searchItem)
-    //console.log(this.getMovieNames())
   },
   methods: {
     async getMovieNames() {
@@ -33,8 +31,6 @@ export default {
       this.filteredMoviesData = data.results
 
       this.$emit('filteredMovies', this.filteredMoviesData)
-      
-      //console.log(this.filteredMoviesData)
     },
     searchMovie() {
       this.getMovieNames()

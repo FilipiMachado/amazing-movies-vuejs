@@ -9,7 +9,7 @@
       <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__movie-wrapper">
         <a class="moviesgrid__movie-link" href="">
           <img class="moviesgrid__movie-image" 
-               :src="'http://image.tmdb.org/t/p/w780' + movie.backdrop_path" 
+               :src="'http://image.tmdb.org/t/p/w780' + movie.poster_path" 
                alt="movie_background">
         </a>
       </div>
@@ -39,10 +39,12 @@ export default {
       const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR")
       const data = await API_URL.json()
 
+      console.log(data)
+
       this.moviesData = data.results
     },
     getFilteredMovies(value) {
-      console.log(value)
+      this.moviesData = value
     },
   },
 };
@@ -71,11 +73,9 @@ export default {
 .moviesgrid__movie-link {}
 .moviesgrid__movie-image {
   width: 100%;
-  height: 300px;
   max-width: 720px;
   object-fit: cover;
   border-radius: 20px;
-  /* animation: 0.5s ease 0s 1 normal none running animateThumb; */
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 </style>
