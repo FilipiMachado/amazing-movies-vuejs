@@ -21,7 +21,7 @@
     </div>
   </div>
   <MoviesInfo v-if="isHomePage"
-              :testData="testData"/>
+              :movieInfo="movieInfo"/>
   <LoadMore v-if="!isHomePage"/>
 </template>
 
@@ -46,7 +46,6 @@ export default {
       moviesData: undefined,
       movieInfo: undefined,
       isHomePage: false,
-      testData: 'hello'
     }
   },
   mounted() {
@@ -63,14 +62,12 @@ export default {
       this.moviesData = value
     },
     getGoToHomePage(value) {
-      console.log(value)
       if (value == true) {
         this.isHomePage = !this.isHomePage
       }
     },
     openSingleMoviePage(payload) {
       this.movieInfo = payload
-      /* console.log(this.movieInfo) */
       this.isHomePage = !this.isHomePage
     },
   },

@@ -53,7 +53,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-left: 30px;
-  background-color: #1c1c1c9a;
+  background-color: hsla(0, 0%, 11%, 0.604);
   padding: 30px;
   border-radius: 10px;
 }

@@ -1,23 +1,23 @@
 <template>
   <div>
-    <div class="moviesinfo__main-content">
+    <div :style="{ backgroundImage: `url(http://image.tmdb.org/t/p/w780${movieInfo.backdrop_path})` }" class="moviesinfo__main-content">
       <div class="moviesinfo__left-content">
-        <img class="moviesinfo__left-content__img" src="../assets/no-image-available.png" alt="">
+        <img class="moviesinfo__left-content__img" :src="'http://image.tmdb.org/t/p/w780' + movieInfo.poster_path"  alt="">
       </div>
       <div class="moviesinfo__right-content">
         <div class="moviesinfo__right-content__title-wrapper">
-          <span class="moviesinfo__right-content__movie-title">{{ testData }}</span>
+          <span class="moviesinfo__right-content__movie-title">{{ movieInfo.original_title }}</span>
           <span class="moviesinfo__right-content__movie-synopsis">SYNOPSIS</span>
-          <span class="moviesinfo__right-content__movie-description">In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.</span>
+          <span class="moviesinfo__right-content__movie-description">{{ movieInfo.overview }}</span>
         </div>
         <div class="moviesinfo__right-content__more-info__wrapper">
           <div class="moviesinfo__right-content__more-info__rating-wrapper">
             <span class="moviesinfo__right-content__more-info__rating-title">RATING</span>
-            <div class="moviesinfo__right-content__more-info__rating">7.8</div>
+            <div class="moviesinfo__right-content__more-info__rating">{{ movieInfo.vote_average }}</div>
           </div>
           <div class="moviesinfo__right-content__more-info__director-wrapper">
-            <span class="moviesinfo__right-content__more-info__director-title">DIRECTOR</span>
-            <div class="moviesinfo__right-content__more-info__director">Matt Reeves</div>
+            <span class="moviesinfo__right-content__more-info__director-title">RELEASE DATE</span>
+            <div class="moviesinfo__right-content__more-info__director">{{ movieInfo.release_date }}</div>
           </div>
         </div>
       </div>
@@ -57,15 +57,13 @@
 export default {
   name: 'MoviesInfo',
   props: [
-    'testData'
+    'movieInfo'
   ],
   mounted() {
-    this.myData = this.testData
-    /* console.log(this.myData) */
+    console.log(this.movieInfo)
   },
   data() {
     return {
-      myData: undefined,
     }
   },
 };
@@ -75,15 +73,23 @@ export default {
 .moviesinfo__main-content {
   display: flex;
   padding: 30px;
-  background-color: rgb(0, 171, 214);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .moviesinfo__left-content {}
-.moviesinfo__left-content__img {}
+.moviesinfo__left-content__img {
+  width: 100%;
+  max-width: 720px;
+  transition: all 0.3s ease 0s;
+  border-radius: 20px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
 .moviesinfo__right-content {
   display: flex;
   flex-direction: column;
-  background-color: rgb(1, 204, 255);
   padding: 30px;
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 11%, 0.604);
 }
 .moviesinfo__right-content__title-wrapper {
   display: flex;
