@@ -16,7 +16,7 @@
             <div class="moviesinfo__right-content__more-info__rating">7.8</div>
           </div>
           <div class="moviesinfo__right-content__more-info__director-wrapper">
-            <span class="moviesinfo__right-content__more-info__director-title">Director</span>
+            <span class="moviesinfo__right-content__more-info__director-title">DIRECTOR</span>
             <div class="moviesinfo__right-content__more-info__director">Matt Reeves</div>
           </div>
         </div>
@@ -68,6 +68,40 @@ export default {
   font-weight: 500;
   padding: 10px 0px;
   color: #fff;
+}
+.moviesinfo__right-content__more-info__wrapper {
+  display: flex;
+  padding: 30px 0px;
+}
+.moviesinfo__right-content__more-info__rating-wrapper {
+  margin-right: 30px;
+}
+.moviesinfo__right-content__more-info__rating-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.moviesinfo__right-content__more-info__rating {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+}
+.moviesinfo__right-content__more-info__director-wrapper {}
+.moviesinfo__right-content__more-info__director-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.moviesinfo__right-content__more-info__director {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+  color: #fff;
+  font-weight: 500;
 }
 
 img {
