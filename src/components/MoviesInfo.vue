@@ -7,7 +7,7 @@
       <div class="moviesinfo__right-content">
         <div class="moviesinfo__right-content__title-wrapper">
           <span class="moviesinfo__right-content__movie-title">The Batman</span>
-          <span class="moviesinfo__right-content__movie-sinopsis">SINOPSE</span>
+          <span class="moviesinfo__right-content__movie-synopsis">SYNOPSIS</span>
           <span class="moviesinfo__right-content__movie-description">In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.</span>
         </div>
         <div class="moviesinfo__right-content__more-info__wrapper">
@@ -37,9 +37,39 @@ export default {
 <style scoped>
 .moviesinfo__main-content {
   display: flex;
-  padding: 0 10px;
-  background-color: rgb(0, 204, 255);
+  padding: 30px;
+  background-color: rgb(0, 171, 214);
 }
+.moviesinfo__left-content {}
+.moviesinfo__left-content__img {}
+.moviesinfo__right-content {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(1, 204, 255);
+  padding: 30px;
+}
+.moviesinfo__right-content__title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.moviesinfo__right-content__movie-title {
+  font-size: 34px;
+  font-weight: bold;
+  color: #fff;
+}
+.moviesinfo__right-content__movie-synopsis {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0px;
+  color: #fff;
+}
+.moviesinfo__right-content__movie-description {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0px;
+  color: #fff;
+}
+
 img {
   width: 500px;
 }
