@@ -36,7 +36,29 @@
       </div>
     </div>
     <div class="moviesinfo__actors__container">
-      <span>Actors</span>
+      <span class="moviesinfo__actors__title">Actors</span>
+      <div class="moviesinfo__actors__rows-container">
+        <div class="moviesinfo__actors__row">
+          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
+          <span>Robert Pattinson</span>
+          <span>Bruce Wayne / The Batman</span>
+        </div>
+        <div class="moviesinfo__actors__row">
+          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
+          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
+          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
+        </div>
+        <div class="moviesinfo__actors__row">
+          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
+          <span>Robert Pattinson</span>
+          <span>Bruce Wayne / The Batman</span>
+        </div>
+        <div class="moviesinfo__actors__row">
+          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
+          <span>Robert Pattinson</span>
+          <span>Bruce Wayne / The Batman</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -146,6 +168,17 @@ export default {
 }
 .moviesinfo__movie-budget__content-text {
   color: #fff;
+}
+.moviesinfo__actors__container {}
+.moviesinfo__actors__title {}
+.moviesinfo__actors__rows-container {}
+.moviesinfo__actors__row {}
+.moviesinfo__actors__row-img {}
+.moviesinfo__actors__row-actor-name {}
+.moviesinfo__actors__row-character-name {}
+
+.moviesinfo__actors__row-img {
+   width: 200px;
 }
 
 img {
