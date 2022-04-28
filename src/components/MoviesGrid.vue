@@ -6,28 +6,25 @@
     </div>
     <div class="moviesgrid__main-content">
       <div class="moviesgrid__grid-container">
-      <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__movie-wrapper">
-        <a class="moviesgrid__movie-link" href="">
-          <img class="moviesgrid__movie-image" 
-               :src="'http://image.tmdb.org/t/p/w780' + movie.poster_path" 
-               alt="movie_background">
-        </a>
+        <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__movie-wrapper">
+          <a @click="openSingleMoviePage" class="moviesgrid__movie-link">
+            <img class="moviesgrid__movie-image" 
+                 :src="'http://image.tmdb.org/t/p/w780' + movie.poster_path" 
+                 alt="movie_background">
+          </a>
+        </div>
       </div>
     </div>
-    </div>
-    <MoviesInfo />
   </div>
 </template>
 
 <script>
 import SearchBar from './SearchBar.vue'
-import MoviesInfo from './MoviesInfo.vue'
 
 export default {
   name: 'MoviesGrid',
   components: {
     SearchBar,
-    MoviesInfo,
   },
   data() {
     return {
@@ -48,6 +45,9 @@ export default {
     },
     getFilteredMovies(value) {
       this.moviesData = value
+    },
+    openSingleMoviePage() {
+      this.$router.push('/moviesinfo')
     },
   },
 };
@@ -73,7 +73,9 @@ export default {
   gap: 2rem;
 }
 .moviesgrid__movie-wrapper {}
-.moviesgrid__movie-link {}
+.moviesgrid__movie-link {
+  cursor: pointer;
+}
 .moviesgrid__movie-image {
   width: 100%;
   max-width: 720px;
