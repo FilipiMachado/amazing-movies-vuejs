@@ -40,8 +40,8 @@
       <div class="moviesinfo__actors__rows-container">
         <div class="moviesinfo__actors__row">
           <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span>Robert Pattinson</span>
-          <span>Bruce Wayne / The Batman</span>
+          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
+          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
         </div>
         <div class="moviesinfo__actors__row">
           <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
@@ -50,13 +50,23 @@
         </div>
         <div class="moviesinfo__actors__row">
           <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span>Robert Pattinson</span>
-          <span>Bruce Wayne / The Batman</span>
+          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
+          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
         </div>
         <div class="moviesinfo__actors__row">
           <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span>Robert Pattinson</span>
-          <span>Bruce Wayne / The Batman</span>
+          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
+          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
+        </div>
+        <div class="moviesinfo__actors__row">
+          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
+          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
+          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
+        </div>
+        <div class="moviesinfo__actors__row">
+          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
+          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
+          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
         </div>
       </div>
     </div>
@@ -169,16 +179,46 @@ export default {
 .moviesinfo__movie-budget__content-text {
   color: #fff;
 }
-.moviesinfo__actors__container {}
-.moviesinfo__actors__title {}
-.moviesinfo__actors__rows-container {}
-.moviesinfo__actors__row {}
-.moviesinfo__actors__row-img {}
-.moviesinfo__actors__row-actor-name {}
-.moviesinfo__actors__row-character-name {}
-
+.moviesinfo__actors__container {
+  max-width: 1280px;
+  margin: 0px auto;
+  padding: 20px;
+}
+.moviesinfo__actors__title {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 10px 5px;
+  display: block;
+}
+.moviesinfo__actors__rows-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.moviesinfo__actors__row {
+  color: #fff;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+}
 .moviesinfo__actors__row-img {
-   width: 200px;
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.moviesinfo__actors__row-actor-name {
+  display: block;
+  padding: 0px 0px 10px 0px;
+}
+.moviesinfo__actors__row-character-name {
+  display: block;
+  padding: 0px 0px 10px 0px;
 }
 
 img {
