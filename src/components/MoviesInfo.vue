@@ -22,6 +22,22 @@
         </div>
       </div>
     </div>
+    <div class="moviesinfo__movie-budget__container">
+      <div class="moviesinfo__movie-budget__wrapper">
+        <div class="moviesinfo__movie-budget__content">
+          <span class="moviesinfo__movie-budget__content-text">Duração: 2h 56m</span>
+        </div>
+        <div class="moviesinfo__movie-budget__content">
+          <span class="moviesinfo__movie-budget__content-text">Orçamento: $185,000,000</span>
+        </div>
+        <div class="moviesinfo__movie-budget__content">
+          <span class="moviesinfo__movie-budget__content-text">Receita: $751,100,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="moviesinfo__actors__container">
+      <span>Actors</span>
+    </div>
   </div>
 </template>
 
@@ -88,6 +104,7 @@ export default {
   display: flex;
   justify-content: center;
   margin: 10px 0px;
+  font-weight: 500;
 }
 .moviesinfo__right-content__more-info__director-wrapper {}
 .moviesinfo__right-content__more-info__director-title {
@@ -102,6 +119,33 @@ export default {
   margin: 10px 0px;
   color: #fff;
   font-weight: 500;
+}
+.moviesinfo__movie-budget__container {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  min-height: 100px;
+  background-color: #1c1c1c;
+  padding: 0px 20px;
+}
+.moviesinfo__movie-budget__wrapper {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0px auto;
+}
+.moviesinfo__movie-budget__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #494949;
+  border-radius: 20px;
+  margin: 0px 20px;
+  flex: 1 1 0%;
+  padding: 15px 0px;
+}
+.moviesinfo__movie-budget__content-text {
+  color: #fff;
 }
 
 img {
