@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="heroimage-container">
+    <div :style="{ backgroundImage: `url(${popularMoviesBackgroundImg})` }" class="heroimage-container">
       <div class="heroimage-wrapper">
         <div class="heroimage-text__wrapper">
-          <span class="heroimage-text__title">Spider-Man: No Way Home</span>
-          <span class="heroimage-text__description">Peter Parker é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha.</span>
+          <span class="heroimage-text__title">{{ popularMovieTitle }}</span>
+          <span class="heroimage-text__description">{{ popularMovieDescription }}</span>
         </div>
       </div>
     </div>
@@ -15,14 +15,31 @@
 export default {
   name: 'HeroImage',
   data() {
-    return {}
+    return {
+      popularMovieTitle: undefined,
+      popularMovieDescription: undefined,
+      popularMoviesBackgroundImg: undefined,
+    }
+  },
+  mounted() {
+    this.getMostPopularMovie()
+  },
+  methods: {
+    async getMostPopularMovie() {
+      const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR")
+      const data = await API_URL.json()
+
+      this.popularMovieTitle = data.results[0].original_title
+      this.popularMovieDescription = data.results[0].overview
+      this.popularMoviesBackgroundImg = "http://image.tmdb.org/t/p/w780" + data.results[0].backdrop_path
+      console.log(this.popularMoviesBackgroundImg)
+    },
   },
 };
 </script>
 
 <style scoped>
 .heroimage-container {
-  background-image: url('../assets/hero-image-example.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

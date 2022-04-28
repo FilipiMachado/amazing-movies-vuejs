@@ -10,7 +10,7 @@
           <a @click="openSingleMoviePage" class="moviesgrid__movie-link">
             <img class="moviesgrid__movie-image" 
                  :src="'http://image.tmdb.org/t/p/w780' + movie.poster_path" 
-                 alt="movie_background">
+                 alt="movie_image">
           </a>
         </div>
       </div>
@@ -38,8 +38,6 @@ export default {
     async getMovieNames() {
       const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR")
       const data = await API_URL.json()
-
-      console.log(data)
 
       this.moviesData = data.results
     },
