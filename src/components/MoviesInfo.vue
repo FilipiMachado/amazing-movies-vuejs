@@ -6,7 +6,7 @@
       </div>
       <div class="moviesinfo__right-content">
         <div class="moviesinfo__right-content__title-wrapper">
-          <span class="moviesinfo__right-content__movie-title">The Batman</span>
+          <span class="moviesinfo__right-content__movie-title">{{ testData }}</span>
           <span class="moviesinfo__right-content__movie-synopsis">SYNOPSIS</span>
           <span class="moviesinfo__right-content__movie-description">In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.</span>
         </div>
@@ -56,8 +56,17 @@
 <script>
 export default {
   name: 'MoviesInfo',
+  props: [
+    'testData'
+  ],
+  mounted() {
+    this.myData = this.testData
+    /* console.log(this.myData) */
+  },
   data() {
-    return {}
+    return {
+      myData: undefined,
+    }
   },
 };
 </script>

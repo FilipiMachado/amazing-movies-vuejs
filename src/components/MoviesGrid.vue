@@ -1,39 +1,52 @@
 <template>
   <div>
-    <SearchBar @filteredMovies="getFilteredMovies"/>
-    <div class="moviesgrid__title-wrapper">
-      <span class="moviesgrid__title">Popular Movies</span>
-    </div>
-    <div class="moviesgrid__main-content">
-      <div class="moviesgrid__grid-container">
-        <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__movie-wrapper">
-          <a @click="openSingleMoviePage(movieInfo)" class="moviesgrid__movie-link">
-            <img class="moviesgrid__movie-image" 
-                 :src="'http://image.tmdb.org/t/p/w780' + movie.poster_path" 
-                 alt="movie_image">
-          </a>
+    <Header @getHomePageValue="getGoToHomePage" :isHomePage="isHomePage"/>
+    <div v-if="!isHomePage">
+      <HeroImage />
+      <SearchBar @filteredMovies="getFilteredMovies"/>
+      <div class="moviesgrid__title-wrapper">
+        <span class="moviesgrid__title">Popular Movies</span>
+      </div>
+      <div class="moviesgrid__main-content">
+        <div class="moviesgrid__grid-container">
+          <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__movie-wrapper">
+            <a @click="openSingleMoviePage(movie)" class="moviesgrid__movie-link">
+              <img class="moviesgrid__movie-image" 
+                   :src="'http://image.tmdb.org/t/p/w780' + movie.poster_path" 
+                   alt="movie_image">
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <MoviesInfo v-if="isHomePage"/>
   </div>
+  <MoviesInfo v-if="isHomePage"
+              :testData="testData"/>
+  <LoadMore v-if="!isHomePage"/>
 </template>
 
 <script>
+import Header from './Header.vue'
+import HeroImage from './HeroImage.vue'
 import SearchBar from './SearchBar.vue'
 import MoviesInfo from './MoviesInfo.vue'
+import LoadMore from './LoadMore.vue'
 
 export default {
   name: 'MoviesGrid',
   components: {
+    Header,
+    HeroImage,
     SearchBar,
     MoviesInfo,
+    LoadMore,
   },
   data() {
     return {
       moviesData: undefined,
       movieInfo: undefined,
       isHomePage: false,
+      testData: 'hello'
     }
   },
   mounted() {
@@ -49,9 +62,16 @@ export default {
     getFilteredMovies(value) {
       this.moviesData = value
     },
-    openSingleMoviePage(e) {
-      console.log(e)
-      this.$router.push('/moviesinfo')
+    getGoToHomePage(value) {
+      console.log(value)
+      if (value == true) {
+        this.isHomePage = !this.isHomePage
+      }
+    },
+    openSingleMoviePage(payload) {
+      this.movieInfo = payload
+      /* console.log(this.movieInfo) */
+      this.isHomePage = !this.isHomePage
     },
   },
 };
