@@ -3,6 +3,7 @@
     <HeroImage />
     <MoviesGrid />
     <LoadMore />
+    <button @click="changePage">Mudar View</button>
   </div>
 </template>
 
@@ -20,6 +21,11 @@ export default {
   },
   data() {
     return {}
+  },
+  methods: {
+    changePage() {
+      this.$router.push('/moviesinfo')
+    },
   },
 }
 </script>

@@ -2,7 +2,7 @@
   <div>
     <SearchBar @filteredMovies="getFilteredMovies"/>
     <div class="moviesgrid__title-wrapper">
-      <span class="moviesgrid__title">Filmes em Alta</span>
+      <span class="moviesgrid__title">Popular Movies</span>
     </div>
     <div class="moviesgrid__main-content">
       <div class="moviesgrid__grid-container">
@@ -15,19 +15,19 @@
       </div>
     </div>
     </div>
-    <DialogMoviesInfo />
+    <MoviesInfo />
   </div>
 </template>
 
 <script>
 import SearchBar from './SearchBar.vue'
-import DialogMoviesInfo from './DialogMoviesInfo.vue'
+import MoviesInfo from './MoviesInfo.vue'
 
 export default {
   name: 'MoviesGrid',
   components: {
     SearchBar,
-    DialogMoviesInfo,
+    MoviesInfo,
   },
   data() {
     return {

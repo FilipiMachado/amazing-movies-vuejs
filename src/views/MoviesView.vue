@@ -1,10 +1,10 @@
 <template>
-  <div>Movies Info</div>
+  <div>MoviesView</div>
 </template>
 
 <script>
 export default {
-  name: 'MoviesInfo',
+  name: 'MoviesView',
   data() {
     return {}
   },
@@ -12,5 +12,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
