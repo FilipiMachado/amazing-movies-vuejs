@@ -7,7 +7,7 @@
     <div class="moviesgrid__main-content">
       <div class="moviesgrid__grid-container">
         <div v-for="movie in moviesData" :key="movie.id" class="moviesgrid__movie-wrapper">
-          <a @click="openSingleMoviePage" class="moviesgrid__movie-link">
+          <a @click="openSingleMoviePage(movieInfo)" class="moviesgrid__movie-link">
             <img class="moviesgrid__movie-image" 
                  :src="'http://image.tmdb.org/t/p/w780' + movie.poster_path" 
                  alt="movie_image">
@@ -15,20 +15,25 @@
         </div>
       </div>
     </div>
+    <MoviesInfo v-if="isHomePage"/>
   </div>
 </template>
 
 <script>
 import SearchBar from './SearchBar.vue'
+import MoviesInfo from './MoviesInfo.vue'
 
 export default {
   name: 'MoviesGrid',
   components: {
     SearchBar,
+    MoviesInfo,
   },
   data() {
     return {
       moviesData: undefined,
+      movieInfo: undefined,
+      isHomePage: false,
     }
   },
   mounted() {
@@ -44,7 +49,8 @@ export default {
     getFilteredMovies(value) {
       this.moviesData = value
     },
-    openSingleMoviePage() {
+    openSingleMoviePage(e) {
+      console.log(e)
       this.$router.push('/moviesinfo')
     },
   },

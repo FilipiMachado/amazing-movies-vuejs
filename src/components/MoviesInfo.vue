@@ -48,26 +48,6 @@
           <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
           <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
         </div>
-        <div class="moviesinfo__actors__row">
-          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
-          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
-        </div>
-        <div class="moviesinfo__actors__row">
-          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
-          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
-        </div>
-        <div class="moviesinfo__actors__row">
-          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
-          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
-        </div>
-        <div class="moviesinfo__actors__row">
-          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
-          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
-        </div>
       </div>
     </div>
   </div>

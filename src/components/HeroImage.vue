@@ -32,7 +32,6 @@ export default {
       this.popularMovieTitle = data.results[0].original_title
       this.popularMovieDescription = data.results[0].overview
       this.popularMoviesBackgroundImg = "http://image.tmdb.org/t/p/w780" + data.results[0].backdrop_path
-      console.log(this.popularMoviesBackgroundImg)
     },
   },
 };
@@ -47,14 +46,16 @@ export default {
   position: relative;
 }
 .heroimage-text__wrapper {
-  z-index: 100;
-  max-width: 700px;
+  max-width: 800px;
   position: absolute;
   bottom: 40px;
   color: #fff;
   display: flex;
   flex-direction: column;
   margin-left: 30px;
+  background-color: #1c1c1c9a;
+  padding: 30px;
+  border-radius: 10px;
 }
 .heroimage-text__title {
   font-size: 2.0rem;
