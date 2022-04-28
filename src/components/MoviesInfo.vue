@@ -10,18 +10,17 @@
           <span class="moviesinfo__right-content__movie-sinopsis">SINOPSE</span>
           <span class="moviesinfo__right-content__movie-description">In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.</span>
         </div>
-        <div>
-          <div>
-            <span>RATING</span>
-            <div>7.8</div>
+        <div class="moviesinfo__right-content__more-info__wrapper">
+          <div class="moviesinfo__right-content__more-info__rating-wrapper">
+            <span class="moviesinfo__right-content__more-info__rating-title">RATING</span>
+            <div class="moviesinfo__right-content__more-info__rating">7.8</div>
           </div>
-          <div>
-            <span>Director</span>
-            <div>Matt Reeves</div>
-        </div>
+          <div class="moviesinfo__right-content__more-info__director-wrapper">
+            <span class="moviesinfo__right-content__more-info__director-title">Director</span>
+            <div class="moviesinfo__right-content__more-info__director">Matt Reeves</div>
+          </div>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -36,6 +35,11 @@ export default {
 </script>
 
 <style scoped>
+.moviesinfo__main-content {
+  display: flex;
+  padding: 0 10px;
+  background-color: rgb(0, 204, 255);
+}
 img {
   width: 500px;
 }
