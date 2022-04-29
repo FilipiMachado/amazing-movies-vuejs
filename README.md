@@ -60,16 +60,28 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 <hr>
 
-<h2>Search Popular Movies</h2>
+<h2>Popular Movies SPA</h2>
 
-Test: https://pop-movies-project.netlify.app/
+Test: https://amazing-movies-vuejs.netlify.app/
 
 <p align="center">
-  <a href="https://imgur.com/57PbV3f"><img src="https://i.imgur.com/57PbV3f.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/ENAsm3s"><img src="https://i.imgur.com/ENAsm3s.png" title="source: imgur.com" /></a>
 </p>
-<h1 align="center">
-    <a href="https://imgur.com/j8XYwDk"><img src="https://i.imgur.com/j8XYwDk.png" title="source: imgur.com" /></a>
-</h1>
+<p align="center">
+  <a href="https://imgur.com/m9TROMD"><img src="https://i.imgur.com/m9TROMD.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/4vOgsRW"><img src="https://i.imgur.com/4vOgsRW.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/Xt1b3QK"><img src="https://i.imgur.com/Xt1b3QK.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/MrCSzVC"><img src="https://i.imgur.com/MrCSzVC.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
+</p>
 
 <br>
 
@@ -77,17 +89,16 @@ Test: https://pop-movies-project.netlify.app/
 
 This project was developed using this technologies:
 
-- [React](https://reactjs.org)
+- [Vue.JS](https://vuejs.org/)
 - [Netlify](https://www.netlify.com/)
-- [TypeScript](https://www.typescriptlang.org/)
 
 ## 🚀 How to Execute
 
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://github.com/FilipiMachado/popular-movies-react
-$ cd popular-movies-react
+$ git clone https://github.com/FilipiMachado/amazing-movies-vuejs
+$ cd amazing-movies-vuejs
 ```
 
 To start, follow this steps:
@@ -96,7 +107,7 @@ To start, follow this steps:
 $ npm install
 
 # Start the project
-$ npm start
+$ npm run serve
 ```
 The app will be available in this address http://localhost:3000.
 
@@ -104,7 +115,7 @@ Remember, you need a account at [Netlify](https://www.netlify.com/) to host this
 
 ## 💻 Project
 
-The Search Popular Movies was developed by Thomas Weibenfalk, during the course offered by freeCodeCamp on Youtube.                                                                                                           
+The Popular Movies SPA was developed using front-end knowledge and requests via API.                                                                                                            
 ## 📝 License
 
 This project is under MIT licensa. Read this file [LICENSE](LICENSE.md) for more details.
