@@ -21,8 +21,8 @@
     </div>
   </div>
   <LoadMore v-if="!isHomePage"
-                :fullMoviesData="fullMoviesData"
-                @loadMoreMovies="loadMoreMovies"/>
+            :fullMoviesData="fullMoviesData"
+            @loadMoreMovies="loadMoreMovies"/>
   <MoviesInfo v-if="isHomePage"
               :movieInfo="movieInfo"/>
 </template>
