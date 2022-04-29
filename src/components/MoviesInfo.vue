@@ -1,23 +1,23 @@
 <template>
-  <div>
+  <div v-if="movieData">
     <div :style="{ backgroundImage: `url(http://image.tmdb.org/t/p/w780${movieInfo.backdrop_path})` }" class="moviesinfo__main-content">
       <div class="moviesinfo__left-content">
         <img class="moviesinfo__left-content__img" :src="'http://image.tmdb.org/t/p/w780' + movieInfo.poster_path"  alt="">
       </div>
       <div class="moviesinfo__right-content">
         <div class="moviesinfo__right-content__title-wrapper">
-          <span class="moviesinfo__right-content__movie-title">{{ movieInfo.original_title }}</span>
+          <span class="moviesinfo__right-content__movie-title">{{ movieData.original_title }}</span>
           <span class="moviesinfo__right-content__movie-synopsis">SYNOPSIS</span>
-          <span class="moviesinfo__right-content__movie-description">{{ movieInfo.overview }}</span>
+          <span class="moviesinfo__right-content__movie-description">{{ movieData.overview }}</span>
         </div>
         <div class="moviesinfo__right-content__more-info__wrapper">
           <div class="moviesinfo__right-content__more-info__rating-wrapper">
             <span class="moviesinfo__right-content__more-info__rating-title">RATING</span>
-            <div class="moviesinfo__right-content__more-info__rating">{{ movieInfo.vote_average }}</div>
+            <div class="moviesinfo__right-content__more-info__rating">{{ movieData.vote_average }}</div>
           </div>
           <div class="moviesinfo__right-content__more-info__director-wrapper">
             <span class="moviesinfo__right-content__more-info__director-title">RELEASE DATE</span>
-            <div class="moviesinfo__right-content__more-info__director">{{ movieInfo.release_date }}</div>
+            <div class="moviesinfo__right-content__more-info__director">{{ movieData.release_date }}</div>
           </div>
         </div>
       </div>
@@ -25,13 +25,13 @@
     <div class="moviesinfo__movie-budget__container">
       <div class="moviesinfo__movie-budget__wrapper">
         <div class="moviesinfo__movie-budget__content">
-          <span class="moviesinfo__movie-budget__content-text">Duração: 2h 56m</span>
+          <span class="moviesinfo__movie-budget__content-text">Runtime: {{ movieData.runtime }}</span>
         </div>
         <div class="moviesinfo__movie-budget__content">
-          <span class="moviesinfo__movie-budget__content-text">Orçamento: $185,000,000</span>
+          <span class="moviesinfo__movie-budget__content-text">Budget: ${{ movieData.budget }}</span>
         </div>
         <div class="moviesinfo__movie-budget__content">
-          <span class="moviesinfo__movie-budget__content-text">Receita: $751,100,000</span>
+          <span class="moviesinfo__movie-budget__content-text">Revenue: ${{ movieData.revenue }}</span>
         </div>
       </div>
     </div>
@@ -60,21 +60,34 @@ export default {
     'movieInfo'
   ],
   mounted() {
+    setTimeout(() => {
+      this.getAllMovies()
+    }, 500);
   },
   data() {
     return {
       movieData: undefined,
+      movieCredits: undefined,
     }
   },
   methods: {
-    /* async getAllMovies() { 
+    async getAllMovies() { 
       const movieId = await this.movieInfo.id
       const API_URL = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=d34609fd1a782372f150c40ad84616df&language=en-US`)
       const data = await API_URL.json()
 
       this.movieData = data
-
+      
       console.log(this.movieData)
+    },
+    /* async getAllMovies() { 
+      const movieId = await this.movieInfo.id
+      const API_URL = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=d34609fd1a782372f150c40ad84616df&language=en-US`)
+      const data = await API_URL.json()
+
+      this.movieCredits = data
+      
+      console.log(this.movieCredits)
     }, */
   },
 };

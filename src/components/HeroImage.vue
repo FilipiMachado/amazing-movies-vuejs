@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     async getMostPopularMovie() {
-      const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR")
+      const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=en-US")
       const data = await API_URL.json()
 
       this.popularMovieTitle = data.results[0].original_title
