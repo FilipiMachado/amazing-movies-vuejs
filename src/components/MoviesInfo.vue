@@ -60,11 +60,22 @@ export default {
     'movieInfo'
   ],
   mounted() {
-    console.log(this.movieInfo)
   },
   data() {
     return {
+      movieData: undefined,
     }
+  },
+  methods: {
+    /* async getAllMovies() { 
+      const movieId = await this.movieInfo.id
+      const API_URL = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=d34609fd1a782372f150c40ad84616df&language=en-US`)
+      const data = await API_URL.json()
+
+      this.movieData = data
+
+      console.log(this.movieData)
+    }, */
   },
 };
 </script>
