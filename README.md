@@ -15,7 +15,10 @@ Teste o Projeto: https://amazing-movies-vuejs.netlify.app/
   <a href="https://imgur.com/Xt1b3QK"><img src="https://i.imgur.com/Xt1b3QK.png" title="source: imgur.com" /></a>
 </p>
 <p align="center">
-  <a href="https://imgur.com/ENAsm3s"><img src="https://i.imgur.com/ENAsm3s.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/MrCSzVC"><img src="https://i.imgur.com/MrCSzVC.png" title="source: imgur.com" /></a>
+</p>
+<p align="center">
+  <a href="https://imgur.com/71WkuqF"><img src="https://i.imgur.com/71WkuqF.png" title="source: imgur.com" /></a>
 </p>
 
 <br>
