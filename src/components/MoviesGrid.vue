@@ -5,6 +5,9 @@
       <HeroImage />
       <SearchBar @filteredMovies="getFilteredMovies"/>
       <div class="moviesgrid__title-wrapper">
+      <LoadMore v-if="!isHomePage"
+                :fullMoviesData="fullMoviesData"
+                @loadMoreMovies="loadMoreMovies"/>
         <span class="moviesgrid__title">Popular Movies</span>
       </div>
       <div class="moviesgrid__main-content">
@@ -22,7 +25,6 @@
   </div>
   <MoviesInfo v-if="isHomePage"
               :movieInfo="movieInfo"/>
-  <LoadMore v-if="!isHomePage"/>
 </template>
 
 <script>
@@ -44,6 +46,7 @@ export default {
   data() {
     return {
       moviesData: undefined,
+      fullMoviesData: undefined,
       movieInfo: undefined,
       isHomePage: false,
     }
@@ -56,9 +59,8 @@ export default {
       const API_URL = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=d34609fd1a782372f150c40ad84616df&language=en-US")
       const data = await API_URL.json()
 
+      this.fullMoviesData = data
       this.moviesData = data.results
-
-      //console.log(this.moviesData)
     },
     getFilteredMovies(value) {
       this.moviesData = value
@@ -72,6 +74,9 @@ export default {
       this.movieInfo = payload
       this.isHomePage = !this.isHomePage
     },
+    loadMoreMovies(payload) {
+      this.moviesData = payload.results
+    }
   },
 };
 </script>
