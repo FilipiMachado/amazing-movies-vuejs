@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     async getMovieNames() {
-      const API_URL = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=d34609fd1a782372f150c40ad84616df&language=pt-BR&query=${this.searchItem}&page=1&include_adult=false`)
+      const API_URL = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=d34609fd1a782372f150c40ad84616df&language=en-US&query=${this.searchItem}&page=1&include_adult=false`)
       const data = await API_URL.json()
 
       this.filteredMoviesData = data.results

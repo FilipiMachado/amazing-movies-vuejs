@@ -25,13 +25,13 @@
     <div class="moviesinfo__movie-budget__container">
       <div class="moviesinfo__movie-budget__wrapper">
         <div class="moviesinfo__movie-budget__content">
-          <span class="moviesinfo__movie-budget__content-text">Runtime: {{ movieData.runtime }}</span>
+          <span class="moviesinfo__movie-budget__content-text">Runtime: {{ convertMinsToHours(movieData.runtime) }}h</span>
         </div>
         <div class="moviesinfo__movie-budget__content">
-          <span class="moviesinfo__movie-budget__content-text">Budget: ${{ movieData.budget }}</span>
+          <span class="moviesinfo__movie-budget__content-text">Budget: ${{ movieData.budget.toLocaleString('en-US') }}</span>
         </div>
         <div class="moviesinfo__movie-budget__content">
-          <span class="moviesinfo__movie-budget__content-text">Revenue: ${{ movieData.revenue }}</span>
+          <span class="moviesinfo__movie-budget__content-text">Revenue: ${{ movieData.revenue.toLocaleString('en-US') }}</span>
         </div>
       </div>
     </div>
@@ -39,7 +39,9 @@
       <span class="moviesinfo__actors__title">Actors</span>
       <div class="moviesinfo__actors__rows-container">
         <div v-for="cast in movieCast" :key="cast.id" class="moviesinfo__actors__row">
-          <img class="moviesinfo__actors__row-img" :src="'http://image.tmdb.org/t/p/w780' + cast.profile_path" alt="">
+          <img class="moviesinfo__actors__row-img" 
+               :src="cast.profile_path ? 'http://image.tmdb.org/t/p/w780' + cast.profile_path : require('../assets/no-image-available.png')" 
+               alt="">
           <span class="moviesinfo__actors__row-actor-name">{{ cast.name }}</span>
           <span class="moviesinfo__actors__row-character-name">{{ cast.character }}</span>
         </div>
@@ -85,6 +87,14 @@ export default {
       
       console.log(this.movieCast)
     },
+    convertMinsToHours(e) {
+      console.log(e)
+      let h = Math.floor(e / 60);
+      let m = e % 60;
+      h = h < 10 ? '0' + h : h; 
+      m = m < 10 ? '0' + m : m; 
+      return h + ':' + m;
+    }
   },
 };
 </script>
