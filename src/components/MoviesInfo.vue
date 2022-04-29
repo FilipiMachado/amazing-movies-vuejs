@@ -35,7 +35,10 @@
         </div>
       </div>
     </div>
-    <div class="moviesinfo__actors__container">
+    <div class="showcast__container">
+      <button class="showcast__btn" @click="showCast">{{ !showCastIsActive ? 'Show' : 'Hide' }} Cast</button>
+    </div>
+    <div v-if="showCastIsActive" class="moviesinfo__actors__container">
       <span class="moviesinfo__actors__title">Actors</span>
       <div class="moviesinfo__actors__rows-container">
         <div v-for="cast in movieCast" :key="cast.id" class="moviesinfo__actors__row">
@@ -66,6 +69,7 @@ export default {
     return {
       movieData: undefined,
       movieCast: undefined,
+      showCastIsActive: false,
     }
   },
   methods: {
@@ -94,7 +98,10 @@ export default {
       h = h < 10 ? '0' + h : h; 
       m = m < 10 ? '0' + m : m; 
       return h + ':' + m;
-    }
+    },
+    showCast() {
+      this.showCastIsActive = !this.showCastIsActive
+    },
   },
 };
 </script>
@@ -207,7 +214,7 @@ export default {
 .moviesinfo__actors__container {
   max-width: 1280px;
   margin: 0px auto;
-  padding: 20px;
+  padding: 0px 20px;
 }
 .moviesinfo__actors__title {
   font-size: 34px;
@@ -244,6 +251,28 @@ export default {
 .moviesinfo__actors__row-character-name {
   display: block;
   padding: 0px 0px 10px 0px;
+}
+.showcast__container {
+  background-color: #494949;
+  padding: 20px;
+}
+.showcast__btn {
+  display: block;
+  background: #1c1c1c;
+  width: 25%;
+  min-width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  color: #fff;
+  border: 0px;
+  font-size: 30px;
+  transition: all 0.3s ease 0s;
+  outline: none;
+  cursor: pointer;
+  margin: auto;
+}
+.showcast__btn:hover {
+  opacity: 0.8;
 }
 
 img {

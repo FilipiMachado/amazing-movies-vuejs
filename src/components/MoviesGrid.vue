@@ -5,9 +5,6 @@
       <HeroImage />
       <SearchBar @filteredMovies="getFilteredMovies"/>
       <div class="moviesgrid__title-wrapper">
-      <LoadMore v-if="!isHomePage"
-                :fullMoviesData="fullMoviesData"
-                @loadMoreMovies="loadMoreMovies"/>
         <span class="moviesgrid__title">Popular Movies</span>
       </div>
       <div class="moviesgrid__main-content">
@@ -23,6 +20,9 @@
       </div>
     </div>
   </div>
+  <LoadMore v-if="!isHomePage"
+                :fullMoviesData="fullMoviesData"
+                @loadMoreMovies="loadMoreMovies"/>
   <MoviesInfo v-if="isHomePage"
               :movieInfo="movieInfo"/>
 </template>
