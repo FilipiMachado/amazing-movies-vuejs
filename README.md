@@ -3,7 +3,7 @@
 Teste o Projeto: https://amazing-movies-vuejs.netlify.app/
 
 <p align="center">
-  <a href="https://imgur.com/ENAsm3s"><img src="https://imgur.com/ENAsm3s" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/ENAsm3s"><img src="https://i.imgur.com/ENAsm3s.png" title="source: imgur.com" /></a>
 </p>
 
 <br>
@@ -21,7 +21,7 @@ Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
 $ git clone https://github.com/FilipiMachado/amazing-movies-vuejs
-$ cd popular-movies-react
+$ cd amazing-movies-vuejs
 ```
 
 Para iniciá-lo, siga os passos abaixo:
