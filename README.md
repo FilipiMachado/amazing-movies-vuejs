@@ -5,9 +5,6 @@ Teste o Projeto: https://amazing-movies-vuejs.netlify.app/
 <p align="center">
   <a href="https://imgur.com/57PbV3f"><img src="https://i.imgur.com/57PbV3f.png" title="source: imgur.com" /></a>
 </p>
-<h1 align="center">
-    <a href="https://imgur.com/j8XYwDk"><img src="https://i.imgur.com/j8XYwDk.png" title="source: imgur.com" /></a>
-</h1>
 
 <br>
 
@@ -15,16 +12,15 @@ Teste o Projeto: https://amazing-movies-vuejs.netlify.app/
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [React](https://reactjs.org)
+- [Vue.JS](https://vuejs.org/)
 - [Netlify](https://www.netlify.com/)
-- [TypeScript](https://www.typescriptlang.org/)
 
 ## 🚀 Como executar
 
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/FilipiMachado/popular-movies-react
+$ git clone https://github.com/FilipiMachado/amazing-movies-vuejs
 $ cd popular-movies-react
 ```
 
@@ -34,15 +30,15 @@ Para iniciá-lo, siga os passos abaixo:
 $ npm install
 
 # Iniciar o projeto
-$ npm start
+$ npm run serve
 ```
-O app estará disponível no seu browser pelo endereço http://localhost:3000.
+O app estará disponível no seu browser pelo endereço: http://localhost:3000.
 
 Lembrando que será necessário criar uma conta no [Netlify](https://www.netlify.com/) para hospedar seu app.
 
 ## 💻 Projeto
 
-O Search Popular Movies foi desenvolvido por Thomas Weibenfalk, durante o curso completo oferecido pela freeCodeCamp no youtube.                                                                                                           
+O Popular Movies SPA foi desenvolvido utilizando conhecimentos de front-end e requests via API.                                                                                                          
 ## 📝 License
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
