@@ -38,15 +38,10 @@
     <div class="moviesinfo__actors__container">
       <span class="moviesinfo__actors__title">Actors</span>
       <div class="moviesinfo__actors__rows-container">
-        <div class="moviesinfo__actors__row">
-          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
-          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
-        </div>
-        <div class="moviesinfo__actors__row">
-          <img class="moviesinfo__actors__row-img" src="../assets/no-image-available.png" alt="">
-          <span class="moviesinfo__actors__row-actor-name">Robert Pattinson</span>
-          <span class="moviesinfo__actors__row-character-name">Bruce Wayne / The Batman</span>
+        <div v-for="cast in movieCast" :key="cast.id" class="moviesinfo__actors__row">
+          <img class="moviesinfo__actors__row-img" :src="'http://image.tmdb.org/t/p/w780' + cast.profile_path" alt="">
+          <span class="moviesinfo__actors__row-actor-name">{{ cast.name }}</span>
+          <span class="moviesinfo__actors__row-character-name">{{ cast.character }}</span>
         </div>
       </div>
     </div>
@@ -62,12 +57,13 @@ export default {
   mounted() {
     setTimeout(() => {
       this.getAllMovies()
+      this.getAllCast()
     }, 500);
   },
   data() {
     return {
       movieData: undefined,
-      movieCredits: undefined,
+      movieCast: undefined,
     }
   },
   methods: {
@@ -78,17 +74,17 @@ export default {
 
       this.movieData = data
       
-      console.log(this.movieData)
+      //console.log(this.movieData)
     },
-    /* async getAllMovies() { 
+    async getAllCast() { 
       const movieId = await this.movieInfo.id
       const API_URL = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=d34609fd1a782372f150c40ad84616df&language=en-US`)
       const data = await API_URL.json()
 
-      this.movieCredits = data
+      this.movieCast = data.cast
       
-      console.log(this.movieCredits)
-    }, */
+      console.log(this.movieCast)
+    },
   },
 };
 </script>
