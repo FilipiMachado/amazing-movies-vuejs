@@ -3,7 +3,7 @@
 Teste o Projeto: https://amazing-movies-vuejs.netlify.app/
 
 <p align="center">
-  <a href="https://imgur.com/57PbV3f"><img src="https://i.imgur.com/57PbV3f.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/ENAsm3s"><img src="https://imgur.com/ENAsm3s" title="source: imgur.com" /></a>
 </p>
 
 <br>
