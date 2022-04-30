@@ -289,7 +289,6 @@ export default {
   .moviesinfo__right-content__more-info__wrapper {
     padding: 20px 0px;
   }
-  .moviesinfo__movie-budget__wrapper {}
   .moviesinfo__movie-budget__content {
     margin: 0px 5px;
     padding: 10px 10px;
@@ -300,9 +299,6 @@ export default {
   }
   .showcast__btn {
     font-size: 24px;
-  }
-  .moviesinfo__actors__row {
-
   }
   .moviesinfo__actors__row-img {
     object-fit: contain;
