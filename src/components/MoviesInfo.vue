@@ -275,7 +275,37 @@ export default {
   opacity: 0.8;
 }
 
-img {
-  width: 500px;
+@media screen and (max-width: 768px) {
+  .moviesinfo__main-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .moviesinfo__left-content__img {
+    max-width: 720px;
+  }
+  .moviesinfo__right-content {
+    padding: 20px;
+  }
+  .moviesinfo__right-content__more-info__wrapper {
+    padding: 20px 0px;
+  }
+  .moviesinfo__movie-budget__wrapper {}
+  .moviesinfo__movie-budget__content {
+    margin: 0px 5px;
+    padding: 10px 10px;
+  }
+  .moviesinfo__movie-budget__content-text {
+    text-align: center;
+    font-size: 16px;
+  }
+  .showcast__btn {
+    font-size: 24px;
+  }
+  .moviesinfo__actors__row {
+
+  }
+  .moviesinfo__actors__row-img {
+    object-fit: contain;
+  }
 }
 </style>

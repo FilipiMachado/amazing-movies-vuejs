@@ -111,4 +111,16 @@ export default {
   border-radius: 20px;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
+
+@media screen and (max-width: 768px) {
+  .moviesgrid__title-wrapper {
+    text-align: center;
+  }
+  .moviesgrid__movie-image {
+    max-width: 260px;
+  }
+  .moviesgrid__movie-wrapper {
+    margin: 0px auto;
+  }
+}
 </style>

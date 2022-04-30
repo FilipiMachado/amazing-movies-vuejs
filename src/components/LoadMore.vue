@@ -49,4 +49,11 @@ export default {
 .loadmore__btn:hover {
   opacity: 0.8;
 }
+
+@media screen and (max-width: 768px) {
+  .loadmore__btn {
+    font-size: 24px;
+    min-width: 260px;
+  }
+}
 </style>

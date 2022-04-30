@@ -66,4 +66,16 @@ export default {
   width: 80%;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .heroimage-text__wrapper {
+    margin: 0px 20px;
+  }
+  .heroimage-text__title {
+    margin: 0px auto;
+  }
+  .heroimage-text__description {
+    margin: 0px auto;
+  }
+}
 </style>
