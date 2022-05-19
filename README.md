@@ -118,4 +118,4 @@ Remember, you need a account at [Netlify](https://www.netlify.com/) to host this
 The Popular Movies SPA was developed using front-end knowledge and requests via API.                                                                                                            
 ## 📝 License
 
-This project is under MIT licensa. Read this file [LICENSE](LICENSE.md) for more details.
+This project is under MIT licence. Read this file [LICENSE](LICENSE.md) for more details.
